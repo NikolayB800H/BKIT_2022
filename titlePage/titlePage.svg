@@ -7,11 +7,15 @@
 				}
 				.center {
 					text-align: center;
+					background-color: white;
+				}
+				h3 {
+					background-color: white;
 				}
 			</style>
 			<div>
 				<div class="image">
-					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill-opacity="1" color-rendering="auto" color-interpolation="auto" text-rendering="auto" stroke="black" stroke-linecap="square" width="170" stroke-miterlimit="10" shape-rendering="auto" stroke-opacity="1" fill="black" stroke-dasharray="none" font-weight="normal" stroke-width="1" height="400" font-family="'Dialog'" font-style="normal" stroke-linejoin="miter" font-size="12px" stroke-dashoffset="0" image-rendering="auto">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill-opacity="1" color-rendering="auto" color-interpolation="auto" text-rendering="auto" stroke="black" stroke-linecap="square" width="170" stroke-miterlimit="10" shape-rendering="auto" stroke-opacity="1" fill="black" stroke-dasharray="none" font-weight="normal" stroke-width="1" height="300" font-family="'Dialog'" font-style="normal" stroke-linejoin="miter" font-size="12px" stroke-dashoffset="0" image-rendering="auto">
 					<defs id="genericDefs"/>
 					<g>
 					<defs id="defs1">
@@ -37,21 +41,26 @@
 					<h2>Факультет «Информатика и системы управления»</h2>
 					<br></br>
 					<h3>Лабораторная работа №1 по курсу "Базовые компоненты интернет-технологий"</h3>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<h3>Выполнил: студент группы ИУ5-33Б Николай Горкунов</h3>
+					<h3>Проверяющий: преподаватель Юрий Гапанюк</h3>
+					<br></br>
+					<h3 class="center">2022 г.</h3>
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill-opacity="1" color-rendering="auto" color-interpolation="auto" text-rendering="auto" stroke="black" stroke-linecap="square" width="1000" stroke-miterlimit="10" shape-rendering="auto" stroke-opacity="1" fill="black" stroke-dasharray="none" font-weight="normal" stroke-width="1" height="800" font-family="'Dialog'" font-style="normal" stroke-linejoin="miter" font-size="12px" stroke-dashoffset="0" image-rendering="auto">
+						<g fill="white" stroke="white">
+							<rect x="0" width="1000" height="800" y="0"/>
+						</g>
+					</svg>
 				</div>
-				<br></br>
-				<br></br>
-				<br></br>
-				<br></br>
-				<br></br>
-				<br></br>
-				<br></br>
-				<br></br>
-				<br></br>
-				<br></br>
-				<h3>Выполнил: студент группы ИУ5-33Б Николай Горкунов</h3>
-				<h3>Проверяющий: преподаватель Юрий Гапанюк</h3>
-				<br></br>
-				<h3 class="center">2022 г.</h3>
 			</div>
 		</div>
 	</foreignObject>
