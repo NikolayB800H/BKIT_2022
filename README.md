@@ -2,11 +2,7 @@
 ## Лабораторная работа №1
 ### Титульный лист
 ---
-<div align="center">
-  <a href="https://github.com/NikolayB800H/BKIT_2022/tree/lab1-in-progress/titlePage/titlePage.svg">
-    <img src="titlePage.svg" width="1000" height="1000" alt="titlePage">
-  </a>
-</div>
+![titlePage](titlePage/titlePage.svg)
 
 ---
 ### Задание
