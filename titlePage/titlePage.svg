@@ -1,0 +1,27 @@
+<svg fill="none" viewBox="0 0 1000 1000" width="1000" height="1000" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <img class="image" src="https://bmstu.ru/assets/images/logo.png" />
+      <div class="center">
+        <h1>Федеральное государственное бюджетное образовательное учреждение высшего образования «Московский государственный технический университет имени Н.Э.Баумана (национальный исследовательский университет)»</h1>
+        <h2>Факультет «Информатика и системы управления»</h2>
+        <h3>Лабораторная работа №1 по курсу "Базовые компоненты интернет-технологий"</h3>
+      </div>
+      <br>
+      <br>
+      <br>
+      <h3>Выполнил: студент группы ИУ5-33Б Николай Горкунов</h3>
+      <h3>Проверяющий: преподаватель Юрий Гапанюк</h3>
+      <br>
+      <h3 class="center">2022 г.</h3>
+      <style type="text/css">
+        .image {
+          float: left;
+        }
+        .center {
+          text-align: center;
+        }
+      </style>
+    </div>
+  </foreignObject>
+</svg>
