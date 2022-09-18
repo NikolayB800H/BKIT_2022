@@ -113,4 +113,4 @@ if __name__ == "__main__":
     main()
 
 # Пример запуска
-# roots_oop.py 1 0 -4
+# lab1.py 1 0 -4
