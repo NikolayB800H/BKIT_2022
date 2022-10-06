@@ -1,6 +1,5 @@
 from lab_python_oop.rectangle import Rectangle
 
-
 class Square(Rectangle):
     """
     Класс «Квадрат» наследуется от класса «Прямоугольник».
