@@ -21,15 +21,20 @@ def main():
         {'title': 'Ковер', 'price': 2000, 'color': 'green'},
         {'title': 'Диван для отдыха', 'price': 5300, 'color': 'black'},
         {'name': 'Skip me', 'addition': 'please'},
-        {'title': 'Стол', 'color': 'brown'}
+        {'title': 'Стол', 'color': 'brown'},
+        {'title': 'Табуретка', 'serialNum': 1000, 'price': int(1e9), 'color': '', 'name': '', 'addition': 'из будущего'}
     ]
     oneFieldGen = field(goods, 'title')
-    print('===== one field  =====')
+    print('=====  one field  =====')
     for i in oneFieldGen:
         print(i)
     twoFieldsGen = field(goods, 'title', 'price')
-    print('===== two fields =====')
+    print('===== two fields  =====')
     for i in twoFieldsGen:
+        print(i)
+    manyFieldsGen = field(goods, 'title', 'serialNum', 'name', 'addition')
+    print('===== many fields =====')
+    for i in manyFieldsGen:
         print(i)
 
 if __name__ == "__main__":
