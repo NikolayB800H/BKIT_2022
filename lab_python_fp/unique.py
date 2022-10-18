@@ -8,7 +8,7 @@ def gen_random(num_count, begin, end):
 class Unique(object):
     def __init__(self, items, **kwargs):
         self.ignore_case = False
-        if kwargs.get('ignore_case') is not None:
+        if 'ignore_case' in kwargs:
             self.ignore_case = kwargs['ignore_case']
         self.used_elements = set() 
         self.iterator = iter(items)
