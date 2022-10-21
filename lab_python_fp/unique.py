@@ -1,9 +1,6 @@
 import random
 import copy
-
-def gen_random(num_count, begin, end):
-    for i in range(num_count):
-        yield random.randint(begin, end)
+from gen_random import gen_random
 
 class Unique(object):
     def __init__(self, items, **kwargs):

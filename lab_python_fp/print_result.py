@@ -1,6 +1,6 @@
 def print_result(some_func):
-    def decorated():
-        ret = some_func()
+    def decorated(*args, **kwargs):
+        ret = some_func(*args, **kwargs)
         print(some_func.__name__)
         if isinstance(ret, dict):
             for i in ret:
