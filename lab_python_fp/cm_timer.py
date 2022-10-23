@@ -7,7 +7,7 @@ class cm_timer_1:
         
     def __enter__(self):
         self.t = time.time()
-        return 333
+        return
         
     def __exit__(self, exp_type, exp_value, traceback):
         if exp_type is not None:
@@ -18,17 +18,21 @@ class cm_timer_1:
 @contextmanager
 def cm_timer_2():
     t = time.time()
-    yield 333
+    yield
     print('time:', time.time() - t)
 
-try:
-    with cm_timer_1() as cm_object:
-        print(cm_object)
-except:
-    pass
-
-with cm_timer_2() as cm_object:
+def main():
     try:
-        print(cm_object)
+        with cm_timer_1() as cm_object:
+            cm_object
     except:
         pass
+
+    with cm_timer_2() as cm_object:
+        try:
+            cm_object
+        except:
+            pass
+
+if __name__ == '__main__':
+    main()
