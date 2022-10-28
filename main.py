@@ -98,8 +98,8 @@ def main():
     print(res_12)
  
     print('\nЗадание В3')
-    # Сортировка по дисплейному классу
-    res_13 = sorted(many_to_many, key = itemgetter(2))
+    # Сортировка по имени компьютера
+    res_13 = sorted(many_to_many, key = itemgetter(0))
     print(res_13)
  
 if __name__ == '__main__':
