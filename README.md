@@ -5,7 +5,8 @@
 |--------------------------------------------------------------------------|---------------------------------------------------|
 | [lab1](https://github.com/NikolayB800H/BKIT_2022/tree/lab1-in-progress)  | Основные конструкции языка Python                 |
 | [lab2](https://github.com/NikolayB800H/BKIT_2022/tree/lab2)              | Объектно-ориентированные возможности языка Python |
-| [lab3](https://github.com/NikolayB800H/BKIT_2022/tree/lab3)              | Функциональные возможности языка Python           |
+| [lab3-4](https://github.com/NikolayB800H/BKIT_2022/tree/lab3)            | Функциональные возможности языка Python           |
+| [lab5](https://github.com/NikolayB800H/BKIT_2022/tree/lab5)              | Модульное тестирование в Python                   |
 | [TBA](https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley) | TBA                                               |
 ### Рубежные контроли
 | Ветка                                                                    | Название                                          |
