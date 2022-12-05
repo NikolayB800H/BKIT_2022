@@ -27,12 +27,3 @@ def test_f4():
         assert ans[i][0] == f3_to_f4[i]
         assert re.match(r"зарплата\s+\d+\s+руб\.", ans[i][1])
         assert 100000 <= int(re.search(r"\d+", ans[i][1]).group()) <= 200000
-
-def main():
-    test_f1()
-    test_f2()
-    test_f3()
-    test_f4()
-
-if __name__ == '__main__':
-    main()
