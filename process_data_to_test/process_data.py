@@ -1,6 +1,5 @@
 import json
 import sys
-from process_data_to_test.cm_timer import cm_timer_1
 from process_data_to_test.print_result import print_result
 import random
 
