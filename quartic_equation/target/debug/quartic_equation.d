@@ -1,0 +1,1 @@
+/home/nop/Projects/bmstu_3sem/BKIT_2022/quartic_equation/target/debug/quartic_equation: /home/nop/Projects/bmstu_3sem/BKIT_2022/quartic_equation/src/lib.rs /home/nop/Projects/bmstu_3sem/BKIT_2022/quartic_equation/src/main.rs /home/nop/Projects/bmstu_3sem/BKIT_2022/quartic_equation/src/qe_struct.rs
