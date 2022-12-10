@@ -9,6 +9,10 @@ pub enum SquareRootResult {
     OneRoot(f64),
     /// С-подобная структура
     TwoRoots { root1: f64, root2: f64 },
+    /// Один корень
+    ThreeRoots { root1: f64, root2: f64, root3: f64 },
+    /// Один корень
+    FourRoots { root1: f64, root2: f64, root3: f64, root4: f64 },
 }
 
 #[derive(Debug, Clone)]
@@ -23,7 +27,7 @@ pub struct Equation {
     /// Дискриминант
     pub diskr: f64,
     /// Корни
-    pub res: SquareRootResult,
+    pub res: Result::<SquareRootResult, &'static str>,
     /// Коэффициенты на вход new
     pub coefs: Vec<String>,
 }
@@ -57,32 +61,76 @@ impl Equation {
             c_b: 0.0,
             c_c: 0.0,
             diskr: 0.0,
-            res: SquareRootResult::NoRoots,
+            res: Ok(SquareRootResult::NoRoots),
             coefs,
+        }
+    }
+
+    fn big_d_to_roots(&mut self, roots: &mut Vec::<f64>, big_d: f64) -> i8 {
+        if big_d == 0.0 {
+            let root = big_d.sqrt();
+            roots.push(root);
+            return 1;
+        } else if big_d > 0.0 {
+            let root = big_d.sqrt();
+            roots.push(-root);
+            roots.push(root);
+            return 2;
+        } else {
+            return 0;
         }
     }
 
     /// Функция вычисления корней
     pub fn calculate_roots(&mut self) {
         self.diskr = self.c_b.powi(2) - 4.0 * self.c_a * self.c_c;
+        let mut roots = Vec::<f64>::new();
         self.res = {
             if self.diskr < 0.0 {
-                SquareRootResult::NoRoots
+                Ok(SquareRootResult::NoRoots)
             } else if self.diskr == 0.0 {
-                let rt = -self.c_b / (2.0 * self.c_a);
-                SquareRootResult::OneRoot(rt)
+                let big_d = -self.c_b / (2.0 * self.c_a);
+                let cnt = self.big_d_to_roots(&mut roots, big_d);
+                match cnt {
+                    0 => Ok(SquareRootResult::NoRoots),
+                    1 => Ok(SquareRootResult::OneRoot(roots[0])),
+                    2 => Ok(SquareRootResult::TwoRoots {
+                        root1: roots[0],
+                        root2: roots[1],
+                    }),
+                    _ => Err("невозможное количество корней"),
+                }
             } else {
-                let rt1 = (-self.c_b - self.diskr.sqrt()) / (2.0 * self.c_a);
-                let rt2 = (-self.c_b + self.diskr.sqrt()) / (2.0 * self.c_a);
-                SquareRootResult::TwoRoots {
-                    root1: rt1,
-                    root2: rt2,
+                let sq_d = self.diskr.sqrt();
+                let mut big_d = (-self.c_b + sq_d) / (2.0 * self.c_a);
+                let mut cnt = self.big_d_to_roots(&mut roots, big_d);
+                big_d = (-self.c_b - sq_d) / (2.0 * self.c_a);
+                cnt += self.big_d_to_roots(&mut roots, big_d);
+                match cnt {
+                    0 => Ok(SquareRootResult::NoRoots),
+                    1 => Ok(SquareRootResult::OneRoot(roots[0])),
+                    2 => Ok(SquareRootResult::TwoRoots {
+                        root1: roots[0],
+                        root2: roots[1],
+                    }),
+                    3 => Ok(SquareRootResult::ThreeRoots {
+                        root1: roots[0],
+                        root2: roots[1],
+                        root3: roots[2],
+                        }),
+                    4 => Ok(SquareRootResult::FourRoots {
+                        root1: roots[0],
+                        root2: roots[1],
+                        root3: roots[2],
+                        root4: roots[3],
+                    }),
+                    _ => Err("невозможное количество корней"),
                 }
             }
         };
     }
 
-    /// Ввод одного коэффициента
+    /// Обновление одного коэффициента, требует ввод если дан не был или некорректный
     fn get_coef(&mut self, index: i8, message: &str) -> f64 {
         let mut input = String::new();
         if self.coefs.len() > index as usize{
@@ -99,8 +147,8 @@ impl Equation {
         };
     }
 
-    /// Обновление коэффициентов уравнения
-    pub fn get_coefs(&mut self) -> () {
+    /// Обновление коэффициентов уравнения, требует ввод недостающих и некорректных
+    pub fn update_coefs(&mut self) -> () {
         self.c_a = self.get_coef(0, "Введите коэффициент A: ");
         self.c_b = self.get_coef(1, "Введите коэффициент B: ");
         self.c_c = self.get_coef(2, "Введите коэффициент C: ");
